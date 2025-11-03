@@ -4,248 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Katrin Haumann Business Coaching</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		body {
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-			line-height: 1.7;
-			color: #1C1F33;
-			background: #F9F7F1;
-		}
-		.header {
-			background: linear-gradient(135deg, #1C1F33 0%, #2a2e47 100%);
-			color: #F9F7F1;
-			padding: 60px 20px;
-			position: relative;
-		}
-		.header-content {
-			max-width: 1300px;
-			margin: auto;
-			text-align: center;
-		}
-		.header-logo {
-			position: absolute;
-			top: 20px;
-			left: 30px;
-			max-width: 200px;
-			height: auto;
-			border-radius: 8px;
-			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-		}
-		.header h1 {
-			font-size: 2.5em;
-			margin-bottom: 20px;
-			font-weight: 300;
-			letter-spacing: 1px;
-		}
-		.header .subtitle {
-			font-size: 1.1em;
-			color: #C1A45D;
-			margin-bottom: 10px;
-			font-weight: 500;
-		}
-		.container {
-			max-width: 1300px;
-			margin: auto;
-			padding: 40px 20px;
-		}
-		.hero-section {
-			display: flex;
-			gap: 50px;
-			align-items: center;
-			margin-bottom: 60px;
-			flex-wrap: wrap;
-		}
-		.hero-content {
-			flex: 2;
-			min-width: 300px;
-		}
-		.hero-image {
-			flex: 1;
-			min-width: 250px;
-			text-align: center;
-		}
-		.hero-image img {
-			max-width: 100%;
-			height: auto;
-			border-radius: 8px;
-			box-shadow: 0 10px 30px rgba(28, 31, 51, 0.15);
-		}
-		.quote {
-			font-style: italic;
-			font-size: 1.2em;
-			color: #1C1F33;
-			border-left: 4px solid #C1A45D;
-			padding-left: 20px;
-			margin: 30px 0;
-			line-height: 1.8;
-		}
-		.intro-text {
-			font-size: 1.05em;
-			margin: 30px 0;
-			color: #2a2e47;
-		}
-		.tagline {
-			text-align: center;
-			font-size: 1.8em;
-			color: #C1A45D;
-			margin: 50px 0 40px 0;
-			font-weight: 300;
-			letter-spacing: 2px;
-		}
-		.services {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-			gap: 30px;
-			margin: 40px 0;
-		}
-		
-		.service-card {
-			background: white;
-			padding: 30px;
-			border-radius: 8px;
-			box-shadow: 0 5px 20px rgba(28, 31, 51, 0.08);
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-			border-top: 3px solid #C1A45D;
-		}
-		.service-card:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 8px 30px rgba(28, 31, 51, 0.15);
-		}
-		.service-card h3 {
-			color: #1C1F33;
-			margin-bottom: 15px;
-			font-size: 1.4em;
-		}
-		.service-card ul {
-			list-style: none;
-			padding-left: 0;
-		}
-		.service-card li {
-			padding: 8px 0;
-			padding-left: 25px;
-			position: relative;
-			color: #2a2e47;
-		}
-		.service-card li:before {
-			content: "→";
-			position: absolute;
-			left: 0;
-			color: #C1A45D;
-			font-weight: bold;
-		}
-		.values {
-			background: #C1A45D;
-			color: #7B3F41;
-			padding: 40px;
-			border-radius: 8px;
-			text-align: center;
-			margin: 50px 0;
-			font-size: 1.3em;
-			font-weight: 300;
-		}
-		.cta-section {
-			background: linear-gradient(135deg, #7B3F41 0%, #8d4d4f 100%);
-			color: #F9F7F1;
-			padding: 50px 40px;
-			border-radius: 8px;
-			text-align: center;
-			margin: 50px 0;
-		}
-		.cta-section h2 {
-			font-size: 2em;
-			margin-bottom: 20px;
-			font-weight: 300;
-		}
-		.cta-section p {
-			font-size: 1.1em;
-			margin-bottom: 30px;
-		}
-		.cta-button {
-			display: inline-block;
-			background: #C1A45D;
-			color: #1C1F33;
-			padding: 15px 40px;
-			border-radius: 50px;
-			text-decoration: none;
-			font-weight: 600;
-			font-size: 1.1em;
-			transition: all 0.3s ease;
-			box-shadow: 0 5px 15px rgba(193, 164, 93, 0.3);
-		}
-		.cta-button:hover {
-			background: #d4b66d;
-			transform: translateY(-2px);
-			box-shadow: 0 8px 20px rgba(193, 164, 93, 0.4);
-		}
-		.contact-section {
-			background: white;
-			padding: 40px;
-			border-radius: 8px;
-			box-shadow: 0 5px 20px rgba(28, 31, 51, 0.08);
-			margin: 40px 0;
-		}
-		.contact-section h2 {
-			color: #1C1F33;
-			margin-bottom: 20px;
-			font-size: 1.8em;
-		}
-		.contact-info {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: 20px;
-			margin-top: 20px;
-		}
-		.contact-info a {
-			color: #C1A45D;
-			text-decoration: none;
-			font-weight: 500;
-			transition: color 0.3s ease;
-		}
-		.contact-info a:hover {
-			color: #7B3F41;
-		}
-		.footer {
-			background: #1C1F33;
-			color: #F9F7F1;
-			padding: 30px 20px;
-			text-align: center;
-			margin-top: 60px;
-		}
-		.footer a {
-			color: #C1A45D;
-			text-decoration: none;
-			margin: 0 15px;
-		}
-		.footer a:hover {
-			text-decoration: underline;
-		}
-		@media (max-width: 1111px) {
-			.header {
-				padding: 30px 20px 20px 20px;
-			}
-			.header h1 {
-				font-size: 1.8em;
-				margin-top: 0;
-			}
-			.header-logo {
-				position: static;
-				max-width: 120px;
-				margin: 0 auto 20px auto;
-				display: block;
-			}
-			.hero-section {
-				flex-direction: column-reverse;
-			}
-			.tagline {
-				font-size: 1.3em;
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 	<div class="header">
@@ -280,7 +39,6 @@
 					<li>für akute Themen und Entscheidungsfragen</li>
 					<li>Schnell, lösungsorientiert, vertraulich</li>
 				</ul>
-				<center><img src="GBC_Siegel.png" height="150"></center>
 			</div>
 
 			<div class="service-card">
@@ -317,7 +75,7 @@
 		<div class="cta-section">
 			<h2>Jetzt kostenfreies Kennenlerngespräch vereinbaren</h2>
 			<p>Lassen Sie uns besprechen, wie Coaching in Ihrem Unternehmen gezielt eingesetzt werden kann.</p>
-			<a href="mailto:BC@KatrinHaumann.de" class="cta-button">Kontakt aufnehmen</a>
+			<a href="mailto:Info@KatrinHaumann.de" class="cta-button">Kontakt aufnehmen</a>
 		</div>
 
 		<div class="contact-section">		
@@ -325,14 +83,14 @@
 			<div class="contact-info">
 				<div>
 					<strong>E-Mail:</strong><br>
-					<a href="mailto:bc@katrinhaumann.de">bc@katrinhaumann.de</a>
+					<a href="mailto:info@katrinhaumann.de">info@katrinhaumann.de</a>
 				</div>
 				<div>
 					<strong>LinkedIn:</strong><br>
 					<a href="https://www.linkedin.com/in/katrin-haumann-832b84121" target="_blank">linkedin.com/in/katrin-haumann-832b84121</a>
 				</div>
 				<div>
-					<b><i>Katrin Haumann</i></b>
+					<center><img src="GBC_Siegel.png" height="150"></center>
 				</div>
 			</div>
 		</div>

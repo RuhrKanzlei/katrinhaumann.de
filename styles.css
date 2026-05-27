@@ -109,14 +109,18 @@ body {
 	transform: translateY(-5px);
 	box-shadow: 0 8px 30px rgba(28, 31, 51, 0.15);
 }
-.service-card h3 {
-	color: #1C1F33;
-	margin-bottom: 15px;
-	font-size: 1.4em;
+.service-card {
+	background: white;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 5px 20px rgba(28, 31, 51, 0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border-top: 3px solid #C1A45D;
+	display: flex;
+	flex-direction: column;
 }
 .service-card ul {
-	list-style: none;
-	padding-left: 0;
+	flex: 1;
 }
 .service-card li {
 	padding: 8px 0;
@@ -130,6 +134,15 @@ body {
 	left: 0;
 	color: #C1A45D;
 	font-weight: bold;
+}
+.service-card .card-image {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	object-fit: contain;
+	margin: 20px auto 0 auto;
+	align-self: center;
+	border-radius: 8px;
 }
 .values {
 	background: #C1A45D;
